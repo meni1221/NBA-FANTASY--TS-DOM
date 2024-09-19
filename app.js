@@ -27,6 +27,9 @@ const getPlayer = () => __awaiter(void 0, void 0, void 0, function* () {
         });
         Player = yield res.json();
         console.log(Player);
+        for (const p of Player) {
+            createRow(p);
+        }
     }
     catch (err) {
         console.log(err);
@@ -41,20 +44,20 @@ const createObg = () => {
     };
 };
 btnSearch.addEventListener("click", (e) => getPlayer());
-const createRow = () => {
-    const tr = document.createElement('tr');
-    const thPlayer = document.createElement('th');
-    const pPlayer = document.createElement('p');
-    const thPosition = document.createElement('th');
-    const pPosition = document.createElement('p');
-    const thPoints = document.createElement('th');
-    const pPoints = document.createElement('p');
-    const thPg = document.createElement('th');
-    const pPg = document.createElement('p');
-    const thP3 = document.createElement('th');
-    const pP3 = document.createElement('p');
-    const thAction = document.createElement('th');
-    const btn = document.createElement('btn');
+const createRow = (player) => {
+    const tr = document.createElement("tr");
+    const thPlayer = document.createElement("th");
+    const pPlayer = document.createElement("p");
+    const thPosition = document.createElement("th");
+    const pPosition = document.createElement("p");
+    const thPoints = document.createElement("th");
+    const pPoints = document.createElement("p");
+    const thPg = document.createElement("th");
+    const pPg = document.createElement("p");
+    const thP3 = document.createElement("th");
+    const pP3 = document.createElement("p");
+    const thAction = document.createElement("th");
+    const btn = document.createElement("btn");
     tablePlayer.appendChild(tr);
     tr.appendChild(thPlayer);
     thPlayer.appendChild(pPlayer);
