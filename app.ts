@@ -42,3 +42,33 @@ const createObg = (): Player => {
 
 btnSearch.addEventListener ("click" , (e:Event)=> getPlayer())
 
+const createRow = (): HTMLElement => {
+    const tr:HTMLElement = document.createElement('tr')
+    const thPlayer:HTMLElement = document.createElement('th')
+    const pPlayer :HTMLParagraphElement = document.createElement('p')
+    const thPosition:HTMLElement = document.createElement('th')
+    const pPosition :HTMLParagraphElement = document.createElement('p')
+    const thPoints:HTMLElement = document.createElement('th')
+    const pPoints :HTMLParagraphElement = document.createElement('p')
+    const thPg:HTMLElement = document.createElement('th')
+    const pPg :HTMLParagraphElement = document.createElement('p')
+    const thP3:HTMLElement = document.createElement('th')
+    const pP3 :HTMLParagraphElement = document.createElement('p')
+    const thAction:HTMLElement = document.createElement('th')
+    const btn :HTMLElement = document.createElement('btn')
+    tablePlayer.appendChild(tr)
+    tr.appendChild(thPlayer)
+    thPlayer.appendChild(pPlayer)
+    tr.appendChild(thPosition)
+    thPosition.appendChild(pPosition)
+    tr.appendChild(thPoints)
+    thPoints.appendChild(pPoints)
+    tr.appendChild(thPg)
+    thPg.appendChild(pPg)
+    tr.appendChild(thP3)
+    thP3.appendChild(pP3)
+    tr.appendChild(thAction)
+    thAction.appendChild(btn)
+    return tablePlayer
+}
+createRow()
