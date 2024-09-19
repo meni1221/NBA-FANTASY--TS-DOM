@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav1{
+    color: white;
+    background-color: blue;
+    height: 100px;
+    text-align: center;
+    width: 100%;
+}
+
+.img{
+    height:130px;
+}
+
+.nav2{
+    margin: 1.5%;
+    color: rgb(45, 45, 215);
+    display: flex;
+    justify-content: center;
+}
+
+.playersPositions{
+    color: rgb(45, 45, 215);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.PointGuard{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+    border-radius: 12px;
+    border: 1px solid rgb(118, 118, 118);
+    height: 220px;
+    width: 170px;
+}
+.ShootingGuard{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+    border-radius: 12px;
+    border: 1px solid rgb(118, 118, 118);
+    height: 220px;
+    width: 170px;
+}
+.SmallForward{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+    border-radius: 12px;
+    border: 1px solid rgb(118, 118, 118);
+    height: 220px;
+    width: 170px;
+}
+.PowerForward{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+    border-radius: 12px;
+    border: 1px solid rgb(118, 118, 118);
+    height: 220px;
+    width: 170px;
+}
+.Center{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+    border-radius: 12px;
+    border: 1px solid rgb(118, 118, 118);
+    height: 220px;
+    width: 170px;
+}
+
+.nav3{
+    color: rgb(45, 45, 215);
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.Search{
+    padding: 1%;
+    background-color: rgb(245, 245, 245);
+    border-radius: 12px;
+    border: 1px solid rgb(118, 118, 118);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50%;
+    width: 40%;
+    gap: 13px;
+}
+
+.select{
+    display: flex;
+    justify-content: center;
+    width: 45%;
+}
+
+input{
+    display: flex;
+    justify-content: center;
+    width: 35%;
+}
+
+.btnSearch{
+    color: white;
+    background-color: rgb(71, 71, 255);
+    height: 20px;
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.table{
+    color: white;
+    background-color: rgb(118, 118, 118);
+    width: 95%;
+    height: auto;
+}
