@@ -7,27 +7,28 @@
     <title>NBA FANTASY</title>
     <link rel="stylesheet" href="style.css">
     <script src="./app.js" defer></script>
+    <link rel="icon" type="image/png" href="F.png" sizes="70x70">
 </head>
 
 <body>
     <nav class="nav1"> <img class="img" src="./F.png"></nav>
-    <nav class="nav2">
+    <nav class="nav2"> 
         <h3>My Fantasy Team</h3>
     </nav>
     <div class="playersPositions">
-        <div class="PointGuard">
+        <div class="PointGuard PG">
             <h4>Point Guard</h4>
         </div>
-        <div class="ShootingGuard">
+        <div class="ShootingGuard SG">
             <h4>Shooting Guard</h4>
         </div>
-        <div class="SmallForward">
+        <div class="SmallForward SF">
             <h4>Small Forward</h4>
         </div>
-        <div class="PowerForward">
+        <div class="PowerForward PF">
             <h4>PowerForward</h4>
         </div>
-        <div class="Center">
+        <div class="Center C">
             <h4>Center</h4>
         </div>
     </div>
@@ -47,14 +48,20 @@
         <input class="three" type="range" value="22" min="0" max="100">
         <button class="btnSearch">Search</button>
         <table class="table">
-            <tr>
-                <th>player</th>
-                <th>Position</th>
-                <th>Points</th>
-                <th>PG%</th>
-                <th>3P%</th>
-                <th>Action</th>
-            </tr>
+            <thead class="headTable">
+                <tr>
+                    <th>player</th>
+                    <th>Position</th>
+                    <th>Points</th>
+                    <th>PG%</th>
+                    <th>3P%</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+
+            </tbody>
+
         </table>
     </div>
 </body>

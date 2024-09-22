@@ -5,8 +5,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .nav1{
+    margin: 0;
+    padding: 0;
     box-shadow: 0 3px 12px rgb(45, 45, 215);
     color: white;
     background-color: blue;
@@ -32,57 +35,73 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 5%;
 }
 
 .PointGuard{
+    margin-top: 2%;
     box-shadow: 0 3px 12px rgb(45, 45, 215);
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: rgb(245, 245, 245);
     border-radius: 12px;
     border: 1px solid rgb(118, 118, 118);
-    height: 220px;
+    height: auto;
     width: 170px;
 }
 .ShootingGuard{
+    margin-top: 2%;
     box-shadow: 0 3px 12px rgb(45, 45, 215);
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: rgb(245, 245, 245);
     border-radius: 12px;
     border: 1px solid rgb(118, 118, 118);
-    height: 220px;
+    height: auto;
     width: 170px;
 }
 .SmallForward{
+    margin-top: 2%;
     box-shadow: 0 3px 12px rgb(45, 45, 215);
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: rgb(245, 245, 245);
     border-radius: 12px;
     border: 1px solid rgb(118, 118, 118);
-    height: 220px;
+    height: auto;
     width: 170px;
 }
 .PowerForward{
+    margin-top: 2%;
     box-shadow: 0 3px 12px rgb(45, 45, 215);
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: rgb(245, 245, 245);
     border-radius: 12px;
     border: 1px solid rgb(118, 118, 118);
-    height: 220px;
+    height: auto;
     width: 170px;
 }
 .Center{
+    margin-top: 2%;
     box-shadow: 0 3px 12px rgb(45, 45, 215);
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: rgb(245, 245, 245);
     border-radius: 12px;
     border: 1px solid rgb(118, 118, 118);
-    height: 220px;
+    height: auto;
     width: 170px;
 }
 
@@ -95,7 +114,8 @@ body{
 
 .search{
     box-shadow: 0 3px 12px rgb(45, 45, 215);
-    padding: 1%;
+    margin: 0;
+    /* padding: 1%; */
     background-color: rgb(245, 245, 245);
     border-radius: 12px;
     border: 1px solid rgb(118, 118, 118);
@@ -104,11 +124,12 @@ body{
     align-items: center;
     flex-direction: column;
     height: 50%;
-    width: 40%;
+    width: auto;
     gap: 13px;
 }
 
 .select{
+    margin-top: 2%;
     box-shadow: 0 3px 12px rgb(45, 45, 215);
     display: flex;
     justify-content: center;
@@ -133,14 +154,32 @@ input{
 
 .table{
     color: white;
-    background-color: rgb(118, 118, 118);
+    background-color: rgb(194, 83, 83);
     box-shadow: 0 3px 12px rgb(45, 45, 215);
-    width: 95%;
+    width: 100%;
     height: auto;
     font-size: larger;
+    margin: 0;
 }
-
-th{
+.headTable{
     background-color: #ff3333;
     padding: 5px;
+}
+th{
+    padding: 10px;
+    border: 1px solid white;
+}
+thead{
+    background-color: #999494;
+    padding: 5px;
+}
+
+.btnAdd{
+    box-shadow: 0 12px 12px rgb(0, 0, 0);
+    color: white;
+    background-color: rgb(71, 71, 255);
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0);
 }

@@ -1,5 +1,4 @@
 "use strict";
-// alert("glad to see you")
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -16,6 +15,7 @@ const inputPlayer2 = document.querySelector(".two");
 const inputPlayer3 = document.querySelector(".three");
 const btnSearch = document.querySelector(".btnSearch");
 const tablePlayer = document.querySelector("table");
+const tbody = document.querySelector("tbody");
 let Player = [];
 const getPlayer = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -27,6 +27,7 @@ const getPlayer = () => __awaiter(void 0, void 0, void 0, function* () {
         });
         Player = yield res.json();
         console.log(Player);
+        tbody.innerHTML = "";
         for (const p of Player) {
             createRow(p);
         }
@@ -37,6 +38,7 @@ const getPlayer = () => __awaiter(void 0, void 0, void 0, function* () {
 });
 const createObg = () => {
     return {
+        playerName: baseURLforPlayer,
         position: selectPlayer.value,
         twoPercent: +inputPlayer2.value,
         threePercent: +inputPlayer3.value,
@@ -48,17 +50,24 @@ const createRow = (player) => {
     const tr = document.createElement("tr");
     const thPlayer = document.createElement("th");
     const pPlayer = document.createElement("p");
+    pPlayer.textContent = player.playerName.toString();
     const thPosition = document.createElement("th");
+    thPosition.textContent = player.position;
     const pPosition = document.createElement("p");
     const thPoints = document.createElement("th");
     const pPoints = document.createElement("p");
+    pPoints.textContent = player.points.toString();
     const thPg = document.createElement("th");
     const pPg = document.createElement("p");
+    pPg.textContent = player.twoPercent.toString();
     const thP3 = document.createElement("th");
     const pP3 = document.createElement("p");
+    pP3.textContent = player.threePercent.toString();
     const thAction = document.createElement("th");
-    const btn = document.createElement("btn");
-    tablePlayer.appendChild(tr);
+    const btn = document.createElement("button");
+    btn.classList.add("btnAdd");
+    btn.textContent = `Add ${player.playerName} to Current Team`;
+    tbody.appendChild(tr);
     tr.appendChild(thPlayer);
     thPlayer.appendChild(pPlayer);
     tr.appendChild(thPosition);
@@ -71,6 +80,22 @@ const createRow = (player) => {
     thP3.appendChild(pP3);
     tr.appendChild(thAction);
     thAction.appendChild(btn);
+    btn.addEventListener('click', () => addPlayer(player));
     return tablePlayer;
 };
-createRow();
+const addPlayer = (player) => {
+    const positionInTeam = document.querySelector(`.${player.position}`);
+    const pName = document.createElement('p');
+    pName.textContent = player.playerName;
+    const twop = document.createElement('p');
+    twop.textContent = 'Tow Precents : ' + player.twoPercent.toString();
+    const threep = document.createElement('p');
+    threep.textContent = 'Three Precents : ' + player.threePercent.toString();
+    const points = document.createElement('p');
+    points.textContent = 'Points : ' + player.points.toString();
+    positionInTeam.innerHTML = '';
+    positionInTeam.appendChild(pName);
+    positionInTeam.appendChild(twop);
+    positionInTeam.appendChild(threep);
+    positionInTeam.appendChild(points);
+};
