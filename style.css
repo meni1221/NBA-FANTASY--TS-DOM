@@ -6,7 +6,13 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
+    background-image: url("./Basket\ Ball.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(70%); 
 }
+
 .nav1{
     margin: 0;
     padding: 0;
@@ -24,7 +30,7 @@ body{
 
 .nav2{
     margin: 1.5%;
-    color: rgb(45, 45, 215);
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
 }
@@ -106,7 +112,7 @@ body{
 }
 
 .nav3{
-    color: rgb(45, 45, 215);
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     margin-top: 2%;

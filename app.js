@@ -19,21 +19,20 @@ const tbody = document.querySelector("tbody");
 let Player = [];
 const getPlayer = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log(createObg());
+        createObg();
         const res = yield fetch(baseURLforPlayer, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(createObg()),
         });
         Player = yield res.json();
-        console.log(Player);
         tbody.innerHTML = "";
         for (const p of Player) {
             createRow(p);
         }
     }
     catch (err) {
-        console.log(err);
+        alert(err);
     }
 });
 const createObg = () => {
